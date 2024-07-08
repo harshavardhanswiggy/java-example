@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_harshavardhanswiggy_java_example_1720437700598-pr-trigger-input-set
+  identifier: Build_harshavardhanswiggy_java_example_1720437700598prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_harshavardhanswiggy_java_example_1720437700598
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
