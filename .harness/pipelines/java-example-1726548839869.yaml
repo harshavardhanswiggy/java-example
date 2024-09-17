@@ -27,9 +27,10 @@ pipeline:
                   spec:
                     shell: Sh
                     command: |-
-                      echo Hello World
+                      #echo Hello World
 
-                      mvn clean install
+                      #mvn clean install
+                      cat pom.xml
           platform:
             os: Linux
             arch: Amd64
