@@ -26,7 +26,10 @@ pipeline:
                   identifier: echo
                   spec:
                     shell: Sh
-                    command: echo Hello World
+                    command: |-
+                      echo Hello World
+
+                      ls -la
           platform:
             os: Linux
             arch: Amd64
