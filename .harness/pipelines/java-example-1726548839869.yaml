@@ -22,7 +22,7 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: echo
+                  name: Build
                   identifier: echo
                   spec:
                     shell: Sh
