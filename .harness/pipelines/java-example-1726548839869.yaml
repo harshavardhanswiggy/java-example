@@ -29,8 +29,31 @@ pipeline:
                     command: |-
                       #echo Hello World
 
-                      #mvn clean install
-                      cat pom.xml
+                      sed -i '/<\/dependencies>/i \
+                          <dependency>\n\
+                              <groupId>org.openjfx</groupId>\n\
+                              <artifactId>javafx-controls</artifactId>\n\
+                              <version>17.0.1</version>\n\
+                          <\/dependency>\n\
+                          <dependency>\n\
+                              <groupId>org.openjfx</groupId>\n\
+                              <artifactId>javafx-fxml</artifactId>\n\
+                              <version>17.0.1</version>\n\
+                          <\/dependency>\n\
+                          <dependency>\n\
+                              <groupId>org.openjfx</groupId>\n\
+                              <artifactId>javafx-base</artifactId>\n\
+                              <version>17.0.1</version>\n\
+                          <\/dependency>\n\
+                          <dependency>\n\
+                              <groupId>org.openjfx</groupId>\n\
+                              <artifactId>javafx-graphics</artifactId>\n\
+                              <version>17.0.1</version>\n\
+                          <\/dependency>' pom.xml
+
+
+
+                      mvn clean install
           platform:
             os: Linux
             arch: Amd64
