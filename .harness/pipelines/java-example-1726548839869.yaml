@@ -29,7 +29,7 @@ pipeline:
                     command: |-
                       echo Hello World
 
-                      ls -la
+                      mvn clean install
           platform:
             os: Linux
             arch: Amd64
