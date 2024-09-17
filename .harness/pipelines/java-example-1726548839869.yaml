@@ -20,15 +20,12 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    connectorRef: account.harnessImage
-                    image: openjdk:latest
-                    shell: Sh
-                    command: echo hello world
-                  timeout: ""
                   type: Run
+                  name: echo
+                  identifier: echo
+                  spec:
+                    shell: Sh
+                    command: echo Hello World
           platform:
             os: Linux
             arch: Amd64
