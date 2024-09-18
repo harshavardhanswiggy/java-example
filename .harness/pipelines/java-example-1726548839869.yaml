@@ -75,6 +75,52 @@ pipeline:
                                       <skipTests>true</skipTests>\n\
                                   <\/configuration>\n\
                               <\/plugin>\n\
+                              <plugin>\n\
+                                  <groupId>org.apache.maven.plugins</groupId>\n\
+                                  <artifactId>maven-assembly-plugin</artifactId>\n\
+                                  <configuration>\n\
+                                      <archive>\n\
+                                          <manifestFile>${basedir}/target/classes/META-INF/MANIFEST.MF<\/manifestFile>\n\
+                                      <\/archive>\n\
+                                  <\/configuration>\n\
+                              <\/plugin>\n\
+                              <plugin>\n\
+                                  <groupId>org.apache.maven.plugins</groupId>\n\
+                                  <artifactId>maven-jar-plugin</artifactId>\n\
+                                  <version>2.5<\/version>\n\
+                                  <configuration>\n\
+                                      <archive>\n\
+                                          <manifestFile>${basedir}/target/classes/META-INF/MANIFEST.MF<\/manifestFile>\n\
+                                          <manifest>\n\
+                                              <addClasspath>true<\/addClasspath>\n\
+                                              <mainClass>com.openfin.desktop.demo.OpenFinDesktopDemo<\/mainClass>\n\
+                                          <\/manifest>\n\
+                                      <\/archive>\n\
+                                  <\/configuration>\n\
+                                  <executions>\n\
+                                      <execution>\n\
+                                          <goals>\n\
+                                              <goal>test-jar<\/goal>\n\
+                                          <\/goals>\n\
+                                      <\/execution>\n\
+                                  <\/executions>\n\
+                              <\/plugin>\n\
+                              <plugin>\n\
+                                  <groupId>org.apache.maven.plugins</groupId>\n\
+                                  <artifactId>maven-dependency-plugin</artifactId>\n\
+                                  <executions>\n\
+                                      <execution>\n\
+                                          <id>copy<\/id>\n\
+                                          <phase>install<\/phase>\n\
+                                          <goals>\n\
+                                              <goal>copy-dependencies<\/goal>\n\
+                                          <\/goals>\n\
+                                          <configuration>\n\
+                                              <outputDirectory>${project.build.directory}<\/outputDirectory>\n\
+                                          <\/configuration>\n\
+                                      <\/execution>\n\
+                                  <\/executions>\n\
+                              <\/plugin>\n\
                           <\/plugins>' pom.xml
 
 
