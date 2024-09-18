@@ -66,7 +66,7 @@ pipeline:
                               <version>5.8.0</version>\n\
                           <\/dependency>' pom.xml 
 
-                      mvn clean install -DskipTests=false -DtestFailureIgnore=true
+                      mvn clean install
           platform:
             os: Linux
             arch: Amd64
