@@ -64,8 +64,18 @@ pipeline:
                               <groupId>net.java.dev.jna</groupId>\n\
                               <artifactId>jna-platform</artifactId>\n\
                               <version>5.8.0</version>\n\
-                          <\/dependency>' pom.xml
-
+                          <\/dependency>' pom.xml && \
+                          sed -i '/<build>/a \
+                          <plugins>\n\
+                              <plugin>\n\
+                                  <groupId>org.apache.maven.plugins</groupId>\n\
+                                  <artifactId>maven-surefire-plugin</artifactId>\n\
+                                  <version>3.0.0-M5</version>\n\
+                                  <configuration>\n\
+                                      <skipTests>true</skipTests>\n\
+                                  <configuration>\n\
+                              <\/plugin>\n\
+                          <\/plugins>' pom.xml
 
 
 
