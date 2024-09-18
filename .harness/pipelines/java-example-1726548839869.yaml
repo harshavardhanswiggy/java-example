@@ -59,7 +59,7 @@ pipeline:
 
 
 
-                      mvn clean install
+                      mvn clean install -DskipTests=false
           platform:
             os: Linux
             arch: Amd64
