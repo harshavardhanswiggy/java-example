@@ -78,7 +78,7 @@ pipeline:
                           <\/plugins>' pom.xml
 
 
-
+                      cat pom.xml
 
                       mvn clean install -DskipTests=false -DtestFailureIgnore=true
           platform:
