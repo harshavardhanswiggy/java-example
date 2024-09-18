@@ -54,7 +54,18 @@ pipeline:
                               <groupId>org.openjfx</groupId>\n\
                               <artifactId>javafx-swing</artifactId>\n\
                               <version>17.0.1</version>\n\
+                          <\/dependency>\n\
+                          <dependency>\n\
+                              <groupId>net.java.dev.jna</groupId>\n\
+                              <artifactId>jna</artifactId>\n\
+                              <version>5.8.0</version>\n\
+                          <\/dependency>\n\
+                          <dependency>\n\
+                              <groupId>net.java.dev.jna</groupId>\n\
+                              <artifactId>jna-platform</artifactId>\n\
+                              <version>5.8.0</version>\n\
                           <\/dependency>' pom.xml
+
 
 
 
